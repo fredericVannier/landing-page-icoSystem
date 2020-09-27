@@ -11,7 +11,6 @@ html {
   list-style: none;
   font-family: "Lato", sans-serif;
   font-size: 16px;
-  color: $primaryFont;
   overflow: hidden;
 }
 
@@ -21,7 +20,7 @@ nav {
   align-items: center;
 
   .ul-container {
-    width: 600px;
+    width: 800px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -43,6 +42,10 @@ nav {
         background-color: $secondaryFont;
       }
     }
+  }
+
+  .logo {
+    height: 40px;
   }
 }
 
@@ -124,7 +127,7 @@ nav {
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
     position: absolute;
-    margin-top: 140px;
+    margin-top: 160px;
     color: $secondaryFont;
     z-index: 3;
   }
@@ -144,6 +147,161 @@ nav {
     border-bottom: 0;
     z-index: 1;
     margin-top: 60px;
+  }
+}
+
+// Dark Mode
+.darkMode {
+  background: rgb(9, 8, 15);
+  color: white;
+
+  nav {
+    .ul-container {
+      .trial-btn {
+        padding: 20px 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: $secondaryFont;
+        font-weight: 900;
+        color: white;
+
+        &:hover {
+          background-color: $primaryBtn;
+        }
+      }
+    }
+  }
+
+  h1 {
+    color: whitesmoke;
+    font-size: 4.5rem;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    line-height: 80px;
+
+    span {
+      font-size: 4.5rem;
+      color: $secondaryFont;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  .buttons-container {
+    .learn-btn {
+      color: white;
+      font-weight: 900;
+      padding: 20px 40px;
+
+      &:hover,
+      &:active {
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 0px 2px $primaryBtn;
+      }
+    }
+  }
+
+  .footer-container {
+    .finish-p {
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      position: absolute;
+      margin-top: 160px;
+      color: white;
+      z-index: 3;
+    }
+
+    .half-circle {
+      width: 400px;
+      height: 200px; /* as the half of the width */
+      position: absolute;
+      background-color: rgb(13, 11, 17);
+      border-top-left-radius: 700px; /* 100px of height + 10px of border */
+      border-top-right-radius: 700px; /* 100px of height + 10px of border */
+      border-bottom: 0;
+      z-index: 1;
+      margin-top: 60px;
+    }
+  }
+}
+
+.switch {
+  --line: #505162;
+  --dot: rgb(255, 187, 0);
+  --circle: #02063b;
+  --duration: 0.3s;
+  --text: #9ea0be;
+  cursor: pointer;
+  input {
+    display: none;
+    & + div {
+      position: relative;
+      &:before,
+      &:after {
+        --s: 1;
+        content: "";
+        position: absolute;
+        height: 4px;
+        top: 10px;
+        width: 24px;
+        background: var(--line);
+        transform: scaleX(var(--s));
+        transition: transform var(--duration) ease;
+      }
+      &:before {
+        --s: 0;
+        left: 0;
+        transform-origin: 0 50%;
+        border-radius: 2px 0 0 2px;
+      }
+      &:after {
+        left: 28px;
+        transform-origin: 100% 50%;
+        border-radius: 0 2px 2px 0;
+      }
+      span {
+        padding-left: 56px;
+        line-height: 24px;
+        color: var(--text);
+        &:before {
+          --x: 0;
+          --b: var(--circle);
+          --s: 4px;
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          box-shadow: inset 0 0 0 var(--s) var(--b);
+          transform: translateX(var(--x));
+          transition: box-shadow var(--duration) ease,
+            transform var(--duration) ease;
+        }
+        &:not(:empty) {
+          padding-left: 64px;
+        }
+      }
+    }
+    &:checked {
+      & + div {
+        &:before {
+          --s: 1;
+        }
+        &:after {
+          --s: 0;
+        }
+        span {
+          &:before {
+            --x: 28px;
+            --s: 12px;
+            --b: var(--dot);
+          }
+        }
+      }
+    }
   }
 }
 
