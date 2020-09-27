@@ -1,0 +1,202 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #b0b0b1;
+  overflow: hidden;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .ul-container {
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .ul-container .home-section {
+  color: #251c57;
+  font-weight: 900;
+}
+
+nav .ul-container .trial-btn {
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1cbfff;
+  font-weight: 900;
+  color: white;
+}
+
+nav .ul-container .trial-btn:hover {
+  background-color: #251c57;
+}
+
+.content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1500px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.content-container .home-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  color: #251c57;
+  line-height: 80px;
+}
+
+.content-container .home-title span {
+  font-size: 4.5rem;
+  color: #1cbfff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content-container .introduction {
+  margin-top: 20px;
+  width: 500px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.content-container .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.content-container .buttons-container .start-btn {
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fd1245;
+  font-weight: 900;
+  color: white;
+}
+
+.content-container .buttons-container .start-btn:hover {
+  background-color: #251c57;
+}
+
+.content-container .buttons-container .learn-btn {
+  color: #251c57;
+  font-weight: 900;
+  padding: 20px 40px;
+}
+
+.content-container .buttons-container .learn-btn:hover, .content-container .buttons-container .learn-btn:active {
+  padding: 20px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px 0px 0px 2px #fd1245;
+          box-shadow: inset 0px 0px 0px 2px #fd1245;
+}
+
+.content-container .image--earth {
+  -webkit-animation: floatingEffect 2.3s ease-in-out infinite;
+          animation: floatingEffect 2.3s ease-in-out infinite;
+}
+
+.footer-container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-container .finish-p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  margin-top: 140px;
+  color: #251c57;
+  z-index: 3;
+}
+
+.footer-container #animal {
+  z-index: 2;
+  height: 170px;
+}
+
+.footer-container .half-circle {
+  width: 400px;
+  height: 200px;
+  /* as the half of the width */
+  position: absolute;
+  background-color: #f6f2fd;
+  border-top-left-radius: 700px;
+  /* 100px of height + 10px of border */
+  border-top-right-radius: 700px;
+  /* 100px of height + 10px of border */
+  border-bottom: 0;
+  z-index: 1;
+  margin-top: 60px;
+}
+
+@-webkit-keyframes floatingEffect {
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+  }
+}
+
+@keyframes floatingEffect {
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

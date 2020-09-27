@@ -1,0 +1,158 @@
+@import "./variables";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: $primaryFont;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .ul-container {
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .home-section {
+      color: $secondaryFont;
+      font-weight: 900;
+    }
+
+    .trial-btn {
+      padding: 20px 40px;
+      border: none;
+      border-radius: 10px;
+      background-color: $secondaryBtn;
+      font-weight: 900;
+      color: white;
+
+      &:hover {
+        background-color: $secondaryFont;
+      }
+    }
+  }
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1500px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  .home-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    color: $secondaryFont;
+    line-height: 80px;
+
+    span {
+      font-size: 4.5rem;
+      color: $secondaryBtn;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  .introduction {
+    margin-top: 20px;
+    width: 500px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+  .buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+    .start-btn {
+      padding: 20px 40px;
+      border: none;
+      border-radius: 10px;
+      background-color: $primaryBtn;
+      font-weight: 900;
+      color: white;
+
+      &:hover {
+        background-color: $secondaryFont;
+      }
+    }
+
+    .learn-btn {
+      color: $secondaryFont;
+      font-weight: 900;
+      padding: 20px 40px;
+
+      &:hover,
+      &:active {
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 0px 2px $primaryBtn;
+      }
+    }
+  }
+
+  .image--earth {
+    animation: floatingEffect 2.3s ease-in-out infinite;
+  }
+}
+
+.footer-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .finish-p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    margin-top: 140px;
+    color: $secondaryFont;
+    z-index: 3;
+  }
+
+  #animal {
+    z-index: 2;
+    height: 170px;
+  }
+
+  .half-circle {
+    width: 400px;
+    height: 200px; /* as the half of the width */
+    position: absolute;
+    background-color: rgb(246, 242, 253);
+    border-top-left-radius: 700px; /* 100px of height + 10px of border */
+    border-top-right-radius: 700px; /* 100px of height + 10px of border */
+    border-bottom: 0;
+    z-index: 1;
+    margin-top: 60px;
+  }
+}
+
+@keyframes floatingEffect {
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 20px);
+  }
+}
